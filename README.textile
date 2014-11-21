@@ -1,0 +1,46 @@
+h1. SmartPointer
+
+h3. Introduction
+
+The main goal of this project is to ensure that resource acquisition occurs at the same time that the object is initialized, so that all resources for the object are created and made ready in one line of code. In general the main goal is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles—to a stack-allocated object whose destructor contains the code to delete or free the resource. Here pointer(s) any type is first initialized then pass that pointer(s) to SmartPointer immediately.
+
+h3. Project Structure
+
+SmartPointer is C++ project and uses templates, it means that you can play with any type pointer(s). In order to keep track of number of pointer RefCount class has added and it has add and release methods, which increment the count on adding pointer(s) and decrement this count by releasing pointer(s) respectively. For testing purpose I have added CubeSample class, which calculate density of any metal in order to find the purity of metal. I have borrowed this class for my incoming opensource C++ game engine sdk.  Last but not the least Demo.cpp class present the actual usage of this library. Rest of the code is straight forward.
+
+
+h3. Uses
+
+SmartPointer prevent situations of memory leaks as memory deallocation is done automatically. i-e object can be destroyed automatically. Put in simple words the object controlled by a smart pointer is automatically destroyed. SmartPointers also eliminate dangling pointers or wild pointers by postponing destruction until the object is no longer in use. 
+
+h3. How to use the Project
+
+h4. Using svn
+
+If you are using svn you need to repo my repository using the command Use this command to anonymously check out the latest project source code:
+
+svn checkout https://github.com/ziaagikian/SmartPointer smartpointer-read-only 
+
+once the source code is downlaoded build import to your favourite ide, like <b>eclipse cdt</b>.
+
+h3. Implementation
+ 
+You can implement SmartPointer as per your requirment i-e when you are dealing in pointers and concerned about its memory management. You can check demo C++ example in the source named as Demo.cpp. Following code show how use SmartPointer.
+
+<pre><code>
+
+/********************* Smart Pointer in action  ***************************/
+	// Initialize any Raw Pointer
+	T *t = new T;// Where T is template and can be any class.
+	//Pass pointer to SmartPointer
+	SPointer<T> obj(t);
+/***************** End of Smart Pointer in action ************************/
+</code></pre>
+
+h3. License
+
+SmartPointer is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a>. 
+
+h3. Issues
+
+Please report bugs, tell me about your problems or request features by creating issues on GitHub.

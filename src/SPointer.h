@@ -1,0 +1,41 @@
+/*
+*	  Spointer.h
+*
+*	  Copyright 2014 ziaagikian <https://github.com/ziaagikian>
+*
+*	   Licensed under the Apache License, Version 2.0 (the "License");
+*	   you may not use this file except in compliance with the License.
+*	   You may obtain a copy of the License at
+*
+*		   http://www.apache.org/licenses/LICENSE-2.0
+*
+*	   Unless required by applicable law or agreed to in writing, software
+*	   distributed under the License is distributed on an "AS IS" BASIS,
+*	   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*	   See the License for the specific language governing permissions and
+*	   limitations under the License.
+*/
+
+#ifndef SPOINTER_H_
+#define SPOINTER_H_
+#include <iostream>
+#include "RefCount.h"
+using namespace std;
+
+template<class T> class SPointer {
+private:
+	T *pData;
+	RefCount *ref;
+public:
+	SPointer(T *pValue) :
+			pData(pValue), ref(0) {
+		ref = new RefCount();
+		ref->AddRef();
+	}
+	~SPointer();
+	T& operator*();
+	SPointer<T> & operator=(SPointer & obj);
+	T* operator->();
+};
+
+#endif /* SPOINTER_H_ */
