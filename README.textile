@@ -19,7 +19,7 @@ h4. Using svn
 
 If you are using svn you need to repo my repository using the command Use this command to anonymously check out the latest project source code:
 
-svn checkout https://github.com/ziaagikian/SmartPointer smartpointer-read-only 
+svn checkout https://github.com/ziaagikian/Smart-Pointer smartpointer-read-only 
 
 once the source code is downlaoded build import to your favourite ide, like <b>eclipse cdt</b>.
 
