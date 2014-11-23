@@ -29,7 +29,7 @@ You can implement SmartPointer as per your requirment i-e when you are dealing i
 /********************* Smart Pointer in action  ***************************/
 	// Initialize any Raw Pointer
 	T *t = new T;// Where T is template and can be any class.
-	//Pass pointer to SmartPointer
+	//Pass t pointer to SmartPointer
 	SPointer<T> obj(t);
 /***************** End of Smart Pointer in action ************************/
 </code></pre>
