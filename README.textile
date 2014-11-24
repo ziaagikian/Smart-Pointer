@@ -2,7 +2,7 @@ h1. SmartPointer
 
 h3. Introduction
 
-SmartPointer is C++ project to ensure that resource acquisition occurs at the same time that the object is initialized, so that all resources for the object are created and made ready in one line of code. In general the main goal is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles—to a stack-allocated object whose destructor contains the code to delete or free the resource. Here pointer(s) of any type is/are first initialized then pass those pointer(s) to SmartPointer immediately.
+SmartPointer is C++ project and its aim is to ensure that resource acquisition occurs at the same time that the object is initialized, so that all resources for the object are created and made ready in one line of code. In general the main goal is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles—to a stack-allocated object whose destructor contains the code to delete or free the resource. Here pointer(s) of any type is/are first initialized then pass those pointer(s) to SmartPointer immediately.
 
 h3. Project Structure
 
