@@ -6,7 +6,7 @@ SmartPointer is C++ project to ensure that resource acquisition occurs at the sa
 
 h3. Project Structure
 
-SmartPointer uses templates, it means that you can play with any type pointer(s). In order to keep track of the number of calls made to SmartPointer RefCount.cpp class is written and it contains two methods i-e AddRef and ReleaseREf, which increment the count on adding pointer(s) and decrement this count by releasing pointer(s) respectively. For testing purpose I have added CubeSample class, which calculate density of any metal in order to find the purity of metal. This class is used in my incoming opensource C++ game engine sdk. Last but not the least Demo.cpp class present the actual usage of this library. Rest of the code is straight forward.
+SmartPointer uses templates, it means that you can play with any type pointer(s). In order to keep track of the number of calls made to SmartPointer RefCount.cpp class is written and it contains two methods i-e AddRef and ReleaseRef, which increment the count on adding pointer(s) and decrement this count by releasing pointer(s) respectively. For testing purpose I have added CubeSample class, which calculate density of any metal in order to find the purity of metal. This class is used in my incoming opensource C++ game engine sdk. Last but not the least Demo.cpp class present the actual usage of this library. Rest of the code is straight forward.
 
 h3. Uses
 
