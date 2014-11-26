@@ -16,6 +16,7 @@
 *	   limitations under the License.
 */
 
+
 #include "CubeSample.h"
 
 Cube::Cube(char * n, float l, float w, float h, float m, float a) {
@@ -34,8 +35,8 @@ Cube::Cube(char * n, float l, float w, float h, float m, float a) {
 }
 
 void Cube::determinePurity() {
-	float vol = getVolume();
-	float density = getDensity(vol);
+//	float vol = getVolume();
+	float density = getDensity();
 	char * str = " is not pure.";
 	if (density == accurate_density) {
 		str = " is pure.";
