@@ -35,13 +35,11 @@ private:
 		return length * width * height;
 	}
 
-	inline float getDensity(float vol){
-		return mass/vol;
+	inline float getDensity(){
+		return mass/getVolume();
 	}
 public:
 	Cube(char * n, float l,float w,float h,float m, float a);
 	void determinePurity();
 	~Cube();
 };
-
-#endif /* CUBE_H_ */
